@@ -26,7 +26,7 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew shadowJar
 
       # Auto release
       - name: Auto release
@@ -37,4 +37,3 @@ jobs:
           prerelease: true
           files: |
             build/libs/*.jar
-            bin/*.jar
